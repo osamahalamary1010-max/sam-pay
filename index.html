@@ -6,37 +6,32 @@
 <title>SAM PAY</title>
 
 <style>
+/* العام */
 *{
     box-sizing:border-box;
     margin:0;
     padding:0;
-    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+    font-family:"Segoe UI", Tahoma, Arial, sans-serif;
 }
-
-
 
 body{
-    min-height:100vh;
-    display:flex;
-    flex-direction: column;   /* 👈 هذا هو الحل */
-    align-items:center;
-    background:linear-gradient(135deg,#eef1f6,#f9fafc);
+    background: linear-gradient(135deg,#eef1f6,#f9fafc);
+    color:#1c1c1c;
 }
 
-/* الكرت الرئيسي – فخم */
+/* البطاقة الرئيسية */
 .card{
     width:90%;
     max-width:1400px;
-    background:linear-gradient(180deg,#ffffff,#f7f8fb);
+    background: linear-gradient(180deg,#ffffff,#f7f8fb);
     border-radius:22px;
     padding:70px 70px 90px;
-    color:#1c1c1c;
+    margin:50px auto;
     box-shadow:0 25px 60px rgba(0,0,0,0.12);
     position:relative;
     overflow:hidden;
 }
 
-/* خط زخرفي خفيف */
 .card::before{
     content:"";
     position:absolute;
@@ -53,12 +48,12 @@ body{
     justify-content:space-between;
     align-items:center;
     margin-bottom:70px;
+    flex-wrap:wrap;
 }
 
 .brand{
-    font-size:22px;
+    font-size:28px;
     font-weight:700;
-    letter-spacing:3px;
     color:#1133a5;
 }
 
@@ -66,14 +61,14 @@ body{
     color:#444;
     text-decoration:none;
     margin-left:30px;
-    font-size:14px;
+    font-size:16px;
     position:relative;
 }
 
 .nav-links a::after{
     content:"";
     position:absolute;
-    bottom:-6px;
+    bottom:-4px;
     right:0;
     width:0;
     height:2px;
@@ -90,6 +85,7 @@ body{
     display:flex;
     align-items:center;
     justify-content:space-between;
+    flex-wrap:wrap;
 }
 
 .text-box{
@@ -109,7 +105,7 @@ body{
     margin-bottom:45px;
 }
 
-/* مربع البحث – فاخر */
+/* مربع البحث */
 .search-box{
     display:flex;
     align-items:center;
@@ -144,7 +140,18 @@ body{
     opacity:0.9;
 }
 
-/* عنصر زخرفي */
+/* الشعار */
+.logo{
+    position:absolute;
+    bottom:45px;
+    left:60px;
+}
+
+.logo img{
+    max-width:240px;
+}
+
+/* زخرفة */
 .decoration{
     position:absolute;
     width:420px;
@@ -154,42 +161,77 @@ body{
     left:-120px;
 }
 
-/* الشعار */
-.logo{
-    position:absolute;
-    bottom:1px;
-    left:10px;
+/* المربعات (features) */
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
 }
 
-.logo img{
-    max-width:240px;
+.feature-box{
+    background:#fff;
+    border-radius:20px;
+    padding:25px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
-/* الجوال */
+.feature-box:hover{
+    transform: translateY(-10px);
+    box-shadow:0 25px 60px rgba(0,0,0,0.15);
+}
+
+.feature-box img{
+    width:80px;
+    margin-bottom:15px;
+}
+
+.feature-box h3{
+    font-size:20px;
+    margin-bottom:10px;
+    color:#1133a5;
+}
+
+.feature-box p{
+    font-size:14px;
+    color:#555;
+}
+
+/* روابط المربعات */
+.feature-link{
+    text-decoration:none;
+    color:inherit;
+    display:block;
+}
+
+/* ======== الجوال ======== */
 @media (max-width:768px){
     .card{
         width:95%;
-        padding:30px 20px 40px; /* تقليل البادينغ قليلاً للراحة */
+        padding:30px 20px 40px;
     }
 
     /* الهيدر */
     .header{
         flex-direction: column;
-        gap:15px; /* تقليل الفراغ بين الشعار والروابط */
+        gap:15px;
         text-align: center;
         margin-bottom:30px;
+        align-items: center;
     }
 
     .nav-links{
         display: flex;
-        flex-direction: column; /* جعل الروابط عمودية */
+        flex-direction: column;
         gap:10px;
         align-items: center;
     }
 
     .nav-links a{
-        margin-left: 0; /* إزالة الهامش الأيسر */
-        font-size:16px; /* تكبير النص قليلاً للوضوح */
+        margin-left: 0;
+        font-size:16px;
     }
 
     /* المحتوى */
@@ -197,31 +239,33 @@ body{
         flex-direction: column;
         gap:30px;
         text-align: center;
-        align-items: center; /* توسيط المحتوى */
+        align-items: center;
     }
 
     .text-box h1{
-        font-size:28px; /* تصغير النص قليلاً ليناسب الشاشات الصغيرة */
+        font-size:28px;
         line-height:1.2;
     }
 
     .text-box h2{
         font-size:16px;
-        letter-spacing:3px; /* تقليل التباعد */
+        letter-spacing:3px;
         margin-bottom:30px;
     }
 
     /* صندوق البحث */
     .search-box{
-        max-width:100%;
-        flex-direction: column; /* ترتيب الإدخال والزر عمودياً إذا ضاقت الشاشة */
+        flex-direction: column;
         gap:10px;
+        max-width:100%;
     }
 
-    .search-box input, .search-box button{
+    .search-box input,
+    .search-box button{
         width:100%;
         font-size:16px;
         padding:12px 15px;
+        border-radius:10px;
     }
 
     /* الشعار */
@@ -233,61 +277,28 @@ body{
     }
 
     .logo img{
-        max-width:140px; /* تصغير الشعار قليلاً */
+        max-width:140px;
     }
 
-    /* الزخرفة (اختياري) */
+    /* الزخرفة */
     .decoration{
         width:250px;
         height:250px;
         bottom:-100px;
         left:-80px;
     }
-}
 
-.features{
-    width:90%;
-    max-width:1400px;
-    margin:80px auto;
-    display:grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap:40px;
-}
+    /* المربعات تصبح عمودية */
+    .features{
+        grid-template-columns:1fr; /* كل مربع يأخذ عرض كامل */
+        gap:25px;
+    }
 
-.feature-box{
-    background:#ffffff;
-    border-radius:18px;
-    padding:30px;
-    text-align:center;
-    box-shadow:0 15px 40px rgba(0,0,0,0.08);
-    transition:0.3s;
-}
-
-.feature-box:hover{
-    transform:translateY(-8px);
-}
-
-.feature-box img{
-    width:100%;
-    max-width:200px;
-    margin-bottom:20px;
-}
-
-.feature-box h3{
-    font-size:18px;
-    margin-bottom:10px;
-    color:#1133a5;
-}
-
-.feature-box p{
-    font-size:14px;
-    color:#555;
-    line-height:1.6;
-}
-.feature-link {
-    text-decoration: none; /* إزالة الخط تحت النص */
-    color: inherit;        /* الحفاظ على لون النص */
-    display: block;        /* يجعل الرابط يغطي كامل المربع */
+    .feature-box{
+        width:100%;
+        max-width:100%;
+        margin:0 auto;
+    }
 }
 
 
