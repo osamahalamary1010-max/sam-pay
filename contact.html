@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>تواصل معنا - SAM PAY</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family:"Segoe UI", Tahoma, Arial, sans-serif;
+}
+
+body{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background:linear-gradient(135deg,#eef1f6,#f9fafc);
+}
+
+/* الكرت الرئيسي */
+.contact-card{
+    width:90%;
+    max-width:900px;
+    background:linear-gradient(180deg,#ffffff,#f7f8fb);
+    border-radius:22px;
+    padding:60px;
+    box-shadow:0 25px 60px rgba(0,0,0,0.12);
+    position:relative;
+}
+
+/* شريط علوي */
+.contact-card::before{
+    content:"";
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    height:4px;
+    background:linear-gradient(to left,#1133a5,#6b5cff);
+}
+
+/* العنوان */
+.contact-header{
+    text-align:center;
+    margin-bottom:50px;
+}
+
+.contact-header h1{
+    font-size:36px;
+    color:#1133a5;
+    margin-bottom:10px;
+}
+
+.contact-header p{
+    font-size:16px;
+    color:#555;
+}
+
+/* طرق التواصل */
+.contact-methods{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:30px;
+}
+
+.method{
+    background:#ffffff;
+    border-radius:16px;
+    padding:30px;
+    text-align:center;
+    box-shadow:0 15px 40px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.method:hover{
+    transform:translateY(-6px);
+}
+
+.method h3{
+    font-size:18px;
+    margin-bottom:10px;
+    color:#1133a5;
+}
+
+.method p{
+    font-size:15px;
+    color:#555;
+    margin-bottom:20px;
+}
+
+.method a{
+    display:inline-block;
+    padding:12px 28px;
+    border-radius:10px;
+    text-decoration:none;
+    font-size:14px;
+    color:#fff;
+}
+
+/* زر الاتصال */
+.call-btn{
+    background:linear-gradient(135deg,#1133a5,#5848e5);
+}
+
+/* زر الواتساب */
+.whatsapp-btn{
+    background:linear-gradient(135deg,#25d366,#1ebe5b);
+}
+
+/* العودة */
+.back{
+    text-align:center;
+    margin-top:50px;
+}
+
+.back a{
+    text-decoration:none;
+    color:#1133a5;
+    font-size:14px;
+}
+
+/* الجوال */
+@media(max-width:768px){
+    .contact-card{
+        padding:35px 25px;
+    }
+
+    .contact-methods{
+        grid-template-columns:1fr;
+    }
+
+    .contact-header h1{
+        font-size:28px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="contact-card">
+
+    <div class="contact-header">
+        <h1>تواصل معنا</h1>
+        <p>نحن هنا لمساعدتك في أي وقت</p>
+    </div>
+
+    <div class="contact-methods">
+
+        <!-- الهاتف -->
+        <div class="method">
+            <h3>الاتصال الهاتفي</h3>
+            <p>تواصل معنا مباشرة عبر الهاتف <br>777143106</p>
+            <a href="tel:+967777143106" class="call-btn">اتصال الآن</a>
+        </div>
+
+        <!-- واتساب -->
+        <div class="method">
+            <h3>واتساب</h3>
+            <p>راسلنا عبر واتساب وسنرد عليك فورًا <br>777772762</p>
+            <a href="https://wa.me/967777772762" class="whatsapp-btn" target="_blank">
+                مراسلة واتساب
+            </a>
+        </div>
+
+    </div>
+
+    <div class="back">
+        <a href="11.html">⬅ العودة للرئيسية</a>
+    </div>
+
+</div>
+
+</body>
+</html>
