@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>برنامج التمارين الأسبوعي - شرح مفصل</title>
+<style>
+body{
+    font-family: Arial, sans-serif;
+    background:#f2f5f9;
+    margin:0;
+    padding:15px;
+    color:#333;
+}
+.container{
+    max-width:950px;
+    margin:auto;
+    background:#fff;
+    padding:20px;
+    border-radius:12px;
+}
+h1,h2{
+    text-align:center;
+    color:#1e3c72;
+}
+.day-buttons{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    margin-bottom:15px;
+}
+.day-buttons button{
+    margin:5px;
+    padding:10px 15px;
+    border:none;
+    background:#1e3c72;
+    color:#fff;
+    border-radius:8px;
+    cursor:pointer;
+}
+.day-buttons button:hover{
+    background:#16315c;
+}
+.day{
+    display:none;
+}
+.day.active{
+    display:block;
+}
+.exercise{
+    background:#eef4ff;
+    padding:15px;
+    border-radius:10px;
+    margin-bottom:15px;
+}
+.exercise h3{
+    margin-top:0;
+    color:#0d47a1;
+}
+ul{
+    padding-right:20px;
+}
+.info{
+    background:#fff3cd;
+    padding:15px;
+    border-radius:10px;
+    margin-top:20px;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>برنامج تمارين أسبوعي – شد وتصغير مع شرح مفصل</h1>
+
+<div class="day-buttons">
+<button onclick="showDay(1)">اليوم 1</button>
+<button onclick="showDay(2)">اليوم 2</button>
+<button onclick="showDay(3)">اليوم 3</button>
+<button onclick="showDay(4)">اليوم 4</button>
+<button onclick="showDay(5)">اليوم 5</button>
+<button onclick="showDay(6)">التمطيط</button>
+<button onclick="showDay(7)">الراحة</button>
+</div>
+
+<!-- اليوم 1 -->
+<div class="day active" id="day1">
+<h2>اليوم 1 – مؤخرة وأفخاذ (الأساس)</h2>
+
+<div class="exercise">
+<h3>سكوات ضيق</h3>
+<p>قف مستقيم، القدمين قريبين، اليدين أمامك أو على الصدر. انزل ببطء 3 ثوانٍ كأنك تجلس على كرسي، ظهر مستقيم وبطن مشدودة، ثم اصعد 2 ثانية.</p>
+<img src="سكواد ضيق.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 مجموعات × 20 عدة</li>
+<li>راحة 30–40 ثانية</li>
+<li>تشعر في: المؤخرة والفخذ الأمامي</li>
+<li>أخطاء شائعة: فتح الرجلين كثير، الميل للأمام</li>
+<li>نصيحة: ركّز على النزول البطيء والتحكم</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h3>لانجز ثابت للأمام</h3>
+<p>قف مستقيم، خطوة طويلة للأمام بالرجل اليمنى، انزل حتى الركبة الخلفية تقترب من الأرض، اضغط بالكعب للأعلى وارجع للوقوف، ثم بدّل الرجل.</p>
+<img src="لانجر.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 × 15 لكل رجل</li>
+<li>راحة 40 ثانية</li>
+<li>تشعر في: المؤخرة والفخذين</li>
+<li>أخطاء: الدفع بأصابع القدم، الميل للأمام</li>
+<li>نصيحة: نزول بطيء وتحكم</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h3>رفع رجل جانبي</h3>
+<p>استلقِ على جنبك، الرجل العليا مستقيمة، ارفعها للأعلى ببطء، انزل ببطء بدون ميل الجسم.</p>
+<img src="رفع رجل جانيب.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 × 20 لكل رجل</li>
+<li>راحة 30 ثانية</li>
+<li>تشعر في: الفخذ الجانبي</li>
+<li>أخطاء: ميل الجسم للأمام أو الخلف</li>
+<li>نصيحة: ركّز على تحريك الرجل فقط</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h3>رفع الحوض (Glute Bridge)</h3>
+<p>استلقِ على ظهرك، اثنِ الركبتين، ارفع الحوض للأعلى، شد المؤخرة ثانيتين، انزل ببطء.</p>
+<img src="شد الموخرة.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 × 20</li>
+<li>راحة 40 ثانية</li>
+<li>تشعر في: المؤخرة والفخذ الخلفي</li>
+<li>أخطاء: رفع الظهر بدل الحوض، النزول السريع</li>
+<li>نصيحة: شد المؤخرة فقط، تحكم بالنزول</li>
+</ul>
+</div>
+</div>
+
+<!-- اليوم 2 -->
+<div class="day" id="day2">
+<h2>اليوم 2 – بطن + كارديو</h2>
+
+<div class="exercise">
+<h3>كرنش</h3>
+<p>استلقِ على ظهرك، الركبتين مثنيتين، ارفع الرأس والكتفين قليلًا بدون شد الرقبة.</p>
+<img src="بطن.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 × 20</li>
+<li>راحة 30 ثانية</li>
+<li>تشعر في: البطن العلوي</li>
+<li>أخطاء: شد الرقبة أو الظهر</li>
+<li>نصيحة: تحكم بالرفع والنزول ببطء</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h3>رفع الأرجل</h3>
+<p>استلقِ على ظهرك، اليدين تحت المؤخرة، ارفع الرجلين مستقيمتين ثم انزل ببطء.</p>
+<img src="رفع الرجل.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 × 15</li>
+<li>راحة 30 ثانية</li>
+<li>تشعر في: أسفل البطن</li>
+<li>أخطاء: استخدام الظهر بدل البطن</li>
+<li>نصيحة: شد البطن طوال الوقت</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h3>بلانك</h3>
+<p>اسند على المرفقين، جسم مستقيم، شد البطن، تنفس منتظم.</p>
+<img src="بلانك.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 × 40 ثانية</li>
+<li>راحة 30 ثانية</li>
+<li>تشعر في: البطن + الظهر</li>
+<li>أخطاء: رفع أو خفض الورك</li>
+<li>نصيحة: جسم مستقيم دائمًا</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h3>كارديو</h3>
+<img src="كارديو.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>مشي بالمكان 10 دقائق</li>
+<li>نط خفيف 5 دقائق</li>
+</ul>
+</div>
+</div>
+
+<!-- اليوم 3 -->
+<div class="day" id="day3">
+<h2>اليوم 3 – مؤخرة وأفخاذ (زوايا مختلفة)</h2>
+
+<div class="exercise">
+<h3>سكوات نبضات (Pulse Squat)</h3>
+<p>انزل نصف سكوات ثم قم بحركات قصيرة متواصلة.</p>
+<img src="سكواد ضيق.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 × 15</li>
+<li>راحة 30 ثانية</li>
+<li>تشعر في: المؤخرة والفخذ الأمامي</li>
+<li>أخطاء: النزول السريع، فتح الرجلين</li>
+<li>نصيحة: تحكم في النبض فقط</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h3>لانجز خلفي</h3>
+<p>قف مستقيم، خطوة للرجل الخلفية، انزل حتى الركبة الخلفية تقترب من الأرض، اضغط بالكعب للأعلى وارجع، بدّل الرجل.</p>
+<img src="لانجر2.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 × 12 لكل رجل</li>
+<li>راحة 40 ثانية</li>
+<li>تشعر في: المؤخرة والفخذ الخلفي</li>
+<li>أخطاء: الدفع بالأصابع، الميل للأمام</li>
+<li>نصيحة: تحكم في النزول ببطء</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h3>رفع الحوض رجل واحدة</h3>
+<p>استلقِ على ظهرك، اثنِ ركبة واحدة، الرجل الأخرى مستقيمة مرفوعة قليلًا، ارفع الحوض مشدودًا، شد المؤخرة ثانيتين، انزل ببطء، بدّل الرجل.</p>
+<img src="" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 × 12 لكل رجل</li>
+<li>راحة 40–45 ثانية</li>
+<li>تشعر في: المؤخرة والفخذ الخلفي</li>
+<li>أخطاء: رفع الظهر بدل الحوض، النزول السريع</li>
+<li>نصيحة: ركّز على شد المؤخرة فقط</li>
+</ul>
+</div>
+</div>
+
+<!-- اليوم 4 -->
+<div class="day" id="day4">
+<h2>اليوم 4 – صدر وذراع</h2>
+
+<div class="exercise">
+<h3>ضغط صدر</h3>
+<p>استلقِ على الأرض أو سطح مستوٍ، ثني المرفقين 90°، ارفع الجسم للأعلى ببطء.</p>
+<img src="ضغط.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 × 12</li>
+<li>راحة 40 ثانية</li>
+<li>تشعر في: الصدر والذراع</li>
+<li>أخطاء: النزول السريع، المرفقان بعيدين جدًا</li>
+<li>نصيحة: تحكم بالنزول والصعود</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h3>بايسبس (زجاجة ماء)</h3>
+<img src="بايسبس.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 × 12 لكل ذراع</li>
+<li>قف أو اجلس وظهرك مستقيم.
+
+أمسك زجاجة ماء بيدك، راحة اليد للأمام.
+
+الذراع ممدودة للأسفل، الكوع قريب من جسمك.
+
+ارفع الزجاجة ببطء بثني الكوع فقط.
+
+عندما تصل الزجاجة قرب الكتف:
+
+شدّ العضلة
+
+ثبّت ثانية واحدة
+
+أنزل الزجاجة ببطء حتى تستقيم الذراع.
+
+كرر ثم بدّل اليد.</li>
+<li>راحة 30 ثانية</li>
+<li>تشعر في: البايسبس</li>
+<li>أخطاء: تحريك المرفق، سرعة الحركة</li>
+<li>نصيحة: شد العضلة عند الصعود</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h3>ترايسبس خلف الرأس</h3>
+<img src="" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 × 12</li>
+<li>الوضعية الأساسية:
+
+قف مستقيم، رجلك بعرض الكتفين، ظهرك مستقيم.
+
+أمسك زجاجة ماء بكلتا يديك فوق رأسك.
+
+حركة النزول:
+
+اثنِ المرفقين ببطء، نزّل الزجاجة وراء الرأس.
+
+المرفقان يبقوا قريبين من الرأس، ما يفتحوش للخارج.
+
+الشد والفرد:
+
+شد عضلات الترايسبس عند النزول.
+
+ثم ارفع الزجاجة للأعلى بفرد المرفقين حتى يرجعوا مستقيمين.</li>
+<li>راحة 30 ثانية</li>
+<li>تشعر في: الجزء الخلفي للذراع</li>
+<li>أخطاء: استخدام الظهر</li>
+<li>نصيحة: ركّز على العضلة فقط</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h3>سكوات خفيف</h3>
+<img src="سكواد  خفيف.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>2 × 20</li>
+<li>راحة 30 ثانية</li>
+<li>تشعر في: المؤخرة والفخذين بدون تضخيم</li>
+</ul>
+</div>
+</div>
+
+<!-- اليوم 5 -->
+<div class="day" id="day5">
+<h2>اليوم 5 – مؤخرة + حرق</h2>
+
+<div class="exercise">
+<h3>سكوات ضيق</h3>
+<img src="سكواد ضيق.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 × 20</li>
+<li>راحة 30–40 ثانية</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h3>رفع رجل خلفي (Donkey Kicks)</h3>
+<img src="رفع رجل خلفي.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+
+<li>3 × 20 لكل رجل</li>
+<li>1) الوضعية الأساسية
+
+ضع نفسك على أربع: اليدين على الأرض بمستوى الكتفين، الركبتين على الأرض بمستوى الوركين.
+
+الظهر مستقيم والعضلات البطنية مشدودة.
+
+الرقبة في وضعية طبيعية، النظر للأمام قليلاً.
+
+2) حركة رفع الرجل
+
+اثنِ ركبة واحدة وابقَ القدم على الأرض.
+
+ارفع الرجل الأخرى إلى الخلف والأعلى مع ثني الركبة قليلاً، كما لو أنك تريد “ركل السقف”.
+
+حاول أن تكون الرجل المرفوعة في خط واحد مع ظهرك.
+
+شد عضلات المؤخرة أثناء رفع الرجل.</li>
+<li>راحة 40 ثانية</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h3>لانجز جانبي</h3>
+<img src="لانجر2.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 × 12 لكل رجل</li>
+<li>راحة 40 ثانية</li>
+</ul>
+</div>
+
+<div class="exercise">
+<h3>سكوات خفيف متواصل</h3>
+<img src="سكواد  خفيف.jpeg" alt="صورة التمرين" style="width:100%; max-width:300px; display:block; margin:10px auto; border-radius:8px;">
+<ul>
+<li>3 دقائق</li>
+<li>راحة 30 ثانية</li>
+</ul>
+</div>
+</div>
+
+<!-- اليوم 6 -->
+<div class="day" id="day6">
+<h2>يوم التمطيط</h2>
+<ul>
+<li>تمطيط الفخذ الأمامي</li>
+<li>تمطيط الخلفي</li>
+<li>تمطيط المؤخرة</li>
+<li>تمطيط أسفل الظهر</li>
+<li>30–40 ثانية لكل وضعية</li>
+</ul>
+</div>
+
+<!-- اليوم 7 -->
+<div class="day" id="day7">
+<h2>يوم الراحة</h2>
+<p>راحة تامة – مسموح مشي خفيف فقط.</p>
+</div>
+
+<!-- معلومات ونصائح -->
+<div class="info">
+<h2>معلومات ونصائح مهمة</h2>
+<ul>
+<li>إذا حسّيت بالحرق = التمرين صحيح</li>
+<li>الألم القوي = أوقف فورًا</li>
+<li>النتائج تكون بالمقاس وليس الوزن</li>
+<li>الراحة القصيرة تسرّع الشد</li>
+<li>النفس: شهيق نزول – زفير صعود</li>
+<li>تحكم في النزول والصعود لكل تمرين للحصول على أفضل نتيجة</li>
+</ul>
+</div>
+
+</div>
+
+<script>
+function showDay(n){
+    let days=document.querySelectorAll('.day');
+    days.forEach(d=>d.classList.remove('active'));
+    document.getElementById('day'+n).classList.add('active');
+}
+</script>
+
+</body>
+</html>
